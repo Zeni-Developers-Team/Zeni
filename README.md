@@ -13,7 +13,7 @@ Zeni is a travel planning application designed to help users organize their trip
 - Itinerary creation and viewing
 - User preferences and settings
 - Multi-language support
-- Terms & Conditions screen
+- Terms & Conditions screen 
 - About page with team information and app version
 
 ## Getting Started
