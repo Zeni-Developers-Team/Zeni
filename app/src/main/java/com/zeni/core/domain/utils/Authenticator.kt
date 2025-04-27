@@ -47,6 +47,18 @@ class Authenticator @Inject constructor() {
     val isEmailVerified: Boolean
         get() = currentUser!!.isEmailVerified
 
+    suspend fun isEmailVerifiedWithReload(): Boolean {
+        return try {
+            if (!currentUser!!.isEmailVerified) {
+                currentUser!!.reload().await()
+            }
+
+            currentUser!!.isEmailVerified
+        } catch (e: FirebaseException) {
+            false
+        }
+    }
+
     /**
      * The phone number of the user in the server.
      */

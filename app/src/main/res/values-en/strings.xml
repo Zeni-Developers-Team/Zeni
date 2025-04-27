@@ -4,7 +4,7 @@
 
     <!--    Login Screen-->
     <string name="login_title">Log In</string>
-    <string name="login_user">User</string>
+    <string name="login_user_field_label">User</string>
     <string name="login_pass">Password</string>
     <string name="login_btn">Access</string>
 

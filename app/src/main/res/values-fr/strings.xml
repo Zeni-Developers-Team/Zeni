@@ -5,7 +5,7 @@
 
     <!--    Écran de connexion -->
     <string name="login_title">Se connecter</string>
-    <string name="login_user">Utilisateur</string>
+    <string name="login_user_field_label">Utilisateur</string>
     <string name="login_pass">Mot de passe</string>
     <string name="login_btn">Connexion</string>
 

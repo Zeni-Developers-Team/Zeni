@@ -9,5 +9,5 @@ data class User(
     val username: String,
     val birthdate: ZonedDateTime,
     val address: String,
-    val country: String,
+    val country: Country,
 )

@@ -12,6 +12,7 @@ import com.zeni.core.presentation.navigation.NavGraph
 import com.zeni.core.presentation.navigation.ScreenInitial
 import com.zeni.core.presentation.theme.ZeniTheme
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -28,7 +29,9 @@ class MainActivity : ComponentActivity() {
             ZeniTheme {
                 NavGraph(
                     navController = rememberNavController(),
-                    screenInitial = viewModel.getInitialScreen()
+                    screenInitial = runBlocking {
+                        viewModel.getInitialScreen()
+                    }
                 )
             }
         }

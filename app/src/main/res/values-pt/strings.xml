@@ -5,7 +5,7 @@
 
     <!--    Login Screen-->
     <string name="login_title">Entrar</string>
-    <string name="login_user">Usuário</string>
+    <string name="login_user_field_label">Usuário</string>
     <string name="login_pass">Senha</string>
     <string name="login_btn">Acessar</string>
 

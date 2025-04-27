@@ -11,6 +11,6 @@ fun User.toEntity(): UserEntity {
         phone = phone,
         birthdate = birthdate,
         address = address,
-        country = country
+        country = country.name
     )
 }

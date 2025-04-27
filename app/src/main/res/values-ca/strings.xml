@@ -5,7 +5,7 @@
 
     <!--    Pantalla d\'inici de sessió -->
     <string name="login_title">Iniciar sessió</string>
-    <string name="login_user">Usuari</string>
+    <string name="login_user_field_label">Usuari</string>
     <string name="login_pass">Contrasenya</string>
     <string name="login_btn">Accedir</string>
 

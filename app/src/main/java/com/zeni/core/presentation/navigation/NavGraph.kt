@@ -13,6 +13,7 @@ import com.zeni.auth.presentation.login.LoginScreen
 import com.zeni.auth.presentation.login.components.LoginViewModel
 import com.zeni.auth.presentation.register.RegisterScreen
 import com.zeni.auth.presentation.register.components.RegisterViewModel
+import com.zeni.auth.presentation.verifyEmail.VerifyEmailScreen
 import com.zeni.itinerary.presentation.UpsertItineraryScreen
 import com.zeni.itinerary.presentation.components.UpsertActivityViewModel
 import com.zeni.settings.presentation.ProfileScreen
@@ -53,6 +54,9 @@ fun NavGraph(
                 viewModel = viewModel,
                 navController = navController
             )
+        }
+        composable<ScreenVerifyEmail> {
+            VerifyEmailScreen()
         }
 
         composable<ScreenInitial> {

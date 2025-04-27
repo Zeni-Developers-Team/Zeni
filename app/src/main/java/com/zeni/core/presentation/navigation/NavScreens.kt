@@ -8,6 +8,9 @@ object ScreenRegister
 object ScreenLogin
 
 @Serializable
+object ScreenVerifyEmail
+
+@Serializable
 object ScreenInitial
 
 @Serializable
