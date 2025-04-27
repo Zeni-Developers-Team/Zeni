@@ -6,7 +6,9 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class ProfileViewModel @Inject constructor() : ViewModel() {
+class ProfileViewModel @Inject constructor(
+    private val authenticator: Authenticator,
+) : ViewModel() {
 
     fun changeProfile() {
         TODO("Function to change some profile data")

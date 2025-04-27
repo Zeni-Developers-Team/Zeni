@@ -157,6 +157,8 @@
         <item quantity="other">Começa em %d minutos</item>
     </plurals>
 
+    <string name="change_password_current_password_not_match">A senha não corresponde à senha da conta</string>
+    <string name="change_password_new_password">Nova senha</string>
     <string name="settings_title">Configurações</string>
     <string name="settings_language">Idioma</string>
     <string name="settings_language_selected">Idioma: %s</string>
@@ -186,4 +188,7 @@
     <string name="accept_button">Aceitar</string>
     <string name="cancel_button">Cancelar</string>
     <string name="password_field_label">Senha</string>
+    <string name="change_password_title">Alterar senha</string>
+    <string name="change_password_email_not_match">O e-mail não corresponde ao da conta</string>
+    <string name="change_password_current_password">"Senha "</string>
 </resources>

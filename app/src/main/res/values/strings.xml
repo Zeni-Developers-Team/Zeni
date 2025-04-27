@@ -180,6 +180,17 @@
     </string>
     <string name="about_zeni">Acerca de Zeni</string>
 
+    <!-- ChangePasswordScreen -->
+    <string name="change_password_title">Cambiar contraseña</string>
+    <string name="change_password_email_not_match">
+        El correo electrónico no coincide con el de la cuenta
+    </string>
+    <string name="change_password_current_password">Contraseña</string>
+    <string name="change_password_current_password_not_match">
+        La contraseña no coincide con la de la cuenta
+    </string>
+    <string name="change_password_new_password">Nueva contraseña</string>
+
     <!-- SettingsScreen -->
     <string name="settings_title">Configuración</string>
     <string name="settings_language">Idioma</string>

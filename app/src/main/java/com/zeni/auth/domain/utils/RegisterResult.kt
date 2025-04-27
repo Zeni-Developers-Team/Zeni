@@ -1,6 +1,7 @@
 package com.zeni.auth.domain.utils
 
 import com.google.firebase.auth.PhoneAuthProvider
+import com.zeni.auth.domain.model.RegisterErrors
 
 sealed interface RegisterResult {
     /**
@@ -18,5 +19,5 @@ sealed interface RegisterResult {
      *
      * @param error The error that occurred.
      */
-    data class Error(val error: RegisterErrors) : RegisterResult
+    data class Error(val error: RegisterErrors.RegisterPasswordErrors) : RegisterResult
 }

@@ -173,6 +173,7 @@
     </string>
 
     <!-- Pantalla de configuració -->
+    <string name="change_password_new_password">Nova contrasenya</string>
     <string name="settings_title">Configuració</string>
     <string name="settings_language">Idioma</string>
     <string name="settings_language_selected">Idioma: %s</string>
@@ -193,4 +194,8 @@
     <string name="accept_button">Acceptar</string>
     <string name="cancel_button">Cancel·lar</string>
     <string name="password_field_label">Contrasenya</string>
+    <string name="change_password_title">Canviar contrasenya</string>
+    <string name="change_password_email_not_match">El correu electrònic no coincideix amb el del compte</string>
+    <string name="change_password_current_password">Contrasenya</string>
+    <string name="change_password_current_password_not_match">La contrasenya no coincideix amb la del compte</string>
 </resources>

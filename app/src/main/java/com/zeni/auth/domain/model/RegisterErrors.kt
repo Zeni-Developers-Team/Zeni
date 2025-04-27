@@ -31,7 +31,9 @@ enum class RegisterErrors {
         /**
          * Error when the email is linked to another account.
          */
-        TAKEN(R.string.register_email_taken_error)
+        TAKEN(R.string.register_email_taken_error),
+
+        NOT_MATCH(R.string.change_password_email_not_match)
     }
 
     /**

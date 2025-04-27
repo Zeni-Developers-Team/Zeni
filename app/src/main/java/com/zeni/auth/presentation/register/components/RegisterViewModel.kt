@@ -176,14 +176,18 @@ class RegisterViewModel @Inject constructor(
     }
 
     suspend fun register(): RegisterResult {
-        return registerUseCase(
-            email = email.value,
-            phone = phone.value,
-            username = username.value,
-            birthdate = birthdate.value!!,
-            address = address.value,
-            country = country.value!!,
-            password = password.value
-        )
+        return if (verifyPassword()) {
+            registerUseCase(
+                email = email.value,
+                phone = phone.value,
+                username = username.value,
+                birthdate = birthdate.value!!,
+                address = address.value,
+                country = country.value!!,
+                password = password.value
+            )
+        } else {
+            RegisterResult.Error(com.zeni.auth.domain.model.RegisterErrors.RegisterPasswordErrors.INSECURE)
+        }
     }
 }

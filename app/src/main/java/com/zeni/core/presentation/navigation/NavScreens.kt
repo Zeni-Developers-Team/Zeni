@@ -41,6 +41,9 @@ data class ScreenItinerary(
 object ScreenMore
 
 @Serializable
+object ScreenChangePassword
+
+@Serializable
 object ScreenProfile
 
 @Serializable

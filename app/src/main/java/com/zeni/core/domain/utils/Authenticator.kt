@@ -2,6 +2,9 @@ package com.zeni.core.domain.utils
 
 import com.google.firebase.Firebase
 import com.google.firebase.FirebaseException
+import com.google.firebase.auth.AuthCredential
+import com.google.firebase.auth.EmailAuthCredential
+import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthInvalidUserException
 import com.google.firebase.auth.FirebaseUser
@@ -21,11 +24,6 @@ class Authenticator @Inject constructor() {
      */
     private val currentUser: FirebaseUser?
         get() = auth.currentUser
-
-    suspend fun reloadUser() {
-        currentUser!!.reload()
-            .await()
-    }
 
     /**
      * The unique identifier of the user in the server.
@@ -105,6 +103,22 @@ class Authenticator @Inject constructor() {
         } catch (e: Exception) {
             // Handle error
             RegisterResult.Error(TODO("Error de registro: ${e.message}"))
+        }
+    }
+
+    suspend fun updatePassword(
+        email: String,
+        oldPassword: String,
+        newPassword: String
+    ): Boolean {
+        return try {
+            val credential = EmailAuthProvider.getCredential(email, oldPassword)
+            currentUser!!.reauthenticate(credential).await()
+
+            currentUser!!.updatePassword(newPassword).await()
+            true
+        } catch (e: Exception) {
+            false
         }
     }
 

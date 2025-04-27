@@ -18,6 +18,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.zeni.R
 import com.zeni.core.presentation.navigation.ScreenAbout
+import com.zeni.core.presentation.navigation.ScreenChangePassword
 import com.zeni.core.presentation.navigation.ScreenLogin
 import com.zeni.core.presentation.navigation.ScreenProfile
 import com.zeni.core.presentation.navigation.ScreenSettings
@@ -40,6 +41,11 @@ fun MoreScreen(
         Option(
             title = stringResource(R.string.profile_title),
             onClick = { navController.navigate(ScreenProfile) },
+            modifier = Modifier
+        )
+        Option(
+            title = stringResource(R.string.change_password_title),
+            onClick = { navController.navigate(ScreenChangePassword) },
             modifier = Modifier
         )
         Option(

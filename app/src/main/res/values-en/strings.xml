@@ -155,6 +155,8 @@
         <item quantity="other">Starts in %d minutes</item>
     </plurals>
 
+    <string name="change_password_current_password_not_match">The password does not match the account\\\'s password</string>
+    <string name="change_password_new_password">New password</string>
     <string name="settings_title">Settings</string>
     <string name="settings_language">Language</string>
     <string name="settings_language_selected">Language: %s</string>
@@ -184,4 +186,7 @@
     <string name="accept_button">Accept</string>
     <string name="cancel_button">Cancel</string>
     <string name="password_field_label">Password</string>
+    <string name="change_password_title">Change password</string>
+    <string name="change_password_email_not_match">The email does not match the account\\\'s email</string>
+    <string name="change_password_current_password">Password</string>
 </resources>
