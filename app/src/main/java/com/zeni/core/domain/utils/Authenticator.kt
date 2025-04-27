@@ -22,6 +22,11 @@ class Authenticator @Inject constructor() {
     private val currentUser: FirebaseUser?
         get() = auth.currentUser
 
+    suspend fun reloadUser() {
+        currentUser!!.reload()
+            .await()
+    }
+
     /**
      * The unique identifier of the user in the server.
      */

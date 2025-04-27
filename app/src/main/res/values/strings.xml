@@ -39,6 +39,13 @@
     <string name="login_btn">Acceder</string>
     <string name="i_have_not_account">¿No tienes una cuenta?</string>
 
+    <!-- VerifyEmailScreen -->
+    <string name="verify_email_title">Verifica tu correo electrónico</string>
+    <string name="verify_email_explanation">
+        Para acceder a Zeni, verifica tu correo electrónico en tu app de correo
+    </string>
+    <string name="open_email_btn">Abrir correo</string>
+
     <!-- Alert Dialog-->
     <string name="alert_title">Alerta</string>
     <string name="alert_message">Usuario o contraseña incorrectos</string>

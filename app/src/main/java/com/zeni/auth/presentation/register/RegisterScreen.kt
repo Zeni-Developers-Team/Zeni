@@ -198,7 +198,7 @@ fun RegisterScreen(
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(IntrinsicSize.Min),
+                            .height(intrinsicSize = IntrinsicSize.Min),
                         horizontalArrangement = Arrangement.spacedBy(
                             space = 8.dp,
                             alignment = Alignment.CenterHorizontally
@@ -519,7 +519,7 @@ private fun RegisterTextField(
             shape = CircleShape
         )
 
-        AnimatedVisibility(visible = isError) {
+        AnimatedVisibility(visible = isError && errorText != null) {
             var currentText by remember { mutableStateOf(value = errorText!!) }
 
             Text(
