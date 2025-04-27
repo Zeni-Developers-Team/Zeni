@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.rememberNavController
+import com.zeni.auth.presentation.register.components.RegisterViewModel
 import com.zeni.core.presentation.navigation.NavGraph
 import com.zeni.core.presentation.navigation.ScreenInitial
 import com.zeni.core.presentation.theme.ZeniTheme
@@ -22,10 +23,12 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
 
         setContent {
+            val viewModel = hiltViewModel<MainViewModel>()
+
             ZeniTheme {
                 NavGraph(
                     navController = rememberNavController(),
-                    screenInitial = ScreenInitial::class // TODO: Conserve login state for future sessions
+                    screenInitial = viewModel.getInitialScreen()
                 )
             }
         }
