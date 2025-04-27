@@ -26,12 +26,15 @@ import com.zeni.auth.domain.utils.LoginErrors
 import com.zeni.auth.presentation.login.components.LoginViewModel
 import com.zeni.core.presentation.navigation.ScreenLogin
 import com.zeni.core.presentation.navigation.ScreenRegister
+import kotlinx.coroutines.launch
 
 @Composable
 fun LoginScreen(
     viewModel: LoginViewModel,
     navController: NavHostController
 ) {
+    val scope = rememberCoroutineScope()
+
     val username by viewModel.username.collectAsState()
     val password by viewModel.password.collectAsState()
     val loginError by viewModel.loginError.collectAsState()
@@ -51,10 +54,12 @@ fun LoginScreen(
                 navController = navController,
                 enabled = loginButtonEnabled,
                 onClick = {
-                    if (viewModel.login()) {
-                        navController.navigate(ScreenHome)
-                    } else {
-                        showAlert = true
+                    scope.launch {
+                        if (viewModel.login()) {
+                            navController.navigate(ScreenHome)
+                        } else {
+                            showAlert = true
+                        }
                     }
                 },
                 modifier = Modifier
@@ -126,10 +131,12 @@ fun LoginScreen(
                         imeAction = ImeAction.Done
                     ),
                     keyboardActions = KeyboardActions {
-                        if (viewModel.login()) {
-                            navController.navigate(ScreenHome)
-                        } else {
-                            showAlert = true
+                        scope.launch {
+                            if (viewModel.login()) {
+                                navController.navigate(ScreenHome)
+                            } else {
+                                showAlert = true
+                            }
                         }
                     },
                     singleLine = true,

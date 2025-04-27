@@ -5,9 +5,13 @@ import androidx.room.Delete
 import androidx.room.Query
 import androidx.room.Upsert
 import com.zeni.core.data.database.entities.UserEntity
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface UserDao {
+
+    @Query("SELECT * FROM user_table WHERE username = :username")
+    fun getUserByUsername(username: String): Flow<UserEntity>
 
     @Query("SELECT EXISTS(SELECT * FROM user_table WHERE uid = :uid)")
     suspend fun existsUser(uid: String): Boolean

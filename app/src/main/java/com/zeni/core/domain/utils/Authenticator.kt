@@ -1,21 +1,14 @@
 package com.zeni.core.domain.utils
 
-import android.app.Activity
-import android.content.Context
 import com.google.firebase.Firebase
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthInvalidUserException
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.auth.PhoneAuthCredential
-import com.google.firebase.auth.PhoneAuthOptions
-import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.auth.auth
 import com.zeni.auth.domain.model.LoginErrors
 import com.zeni.auth.domain.utils.RegisterResult
-import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.tasks.await
-import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -76,7 +69,6 @@ class Authenticator @Inject constructor() {
         password: String
     ): LoginErrors {
         return try {
-            TODO("Verify email")
             auth.signInWithEmailAndPassword(email, password)
                 .await()
             LoginErrors.NONE
@@ -111,7 +103,7 @@ class Authenticator @Inject constructor() {
         }
     }
 
-    fun logout() {
+    fun logOut() {
         auth.signOut()
     }
 }

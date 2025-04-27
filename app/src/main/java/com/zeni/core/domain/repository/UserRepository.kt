@@ -1,8 +1,11 @@
 package com.zeni.core.domain.repository
 
 import com.zeni.core.domain.model.User
+import kotlinx.coroutines.flow.Flow
 
 interface UserRepository {
+
+    fun getUserByUsername(username: String): Flow<User>
 
     suspend fun existsUser(): Boolean
 

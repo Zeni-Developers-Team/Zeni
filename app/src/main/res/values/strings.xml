@@ -186,6 +186,8 @@
     <string name="auto_dark_mode">Modo oscuro automático</string>
     <string name="dark_mode">Modo oscuro</string>
 
+    <string name="log_out_btn">Cerrar sesión</string>
+
 
     <!-- Developers info -->
     <string name="developers_title">Desarrolladores:</string>
